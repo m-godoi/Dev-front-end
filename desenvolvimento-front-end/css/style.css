@@ -1,0 +1,182 @@
+/* style.css */
+
+/* 1. Reset Básico e Definições Globais */
+:root {
+  --cor-primaria: #7a7a72;
+  --cor-secundaria: #ff000081;
+  --cor-h3: #d34d00;
+  --cor-fundo: #f371076c;
+  --cor-texto: #5a1a1a;
+  --cor-branca: #d11b1b;
+  --cor-borda: #b60f5d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* 2. Estilos do Cabeçalho e Navegação */
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header nav a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* 3. Conteúdo Principal */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--cor-branca);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+main h2 {
+  color: var(--cor-primaria);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--cor-fundo);
+  padding-bottom: 0.5rem;
+}
+
+main h3 {
+    color: var(--cor-h3)
+}
+
+main p {
+    margin-bottom: 1rem;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* 4. Tabela de Serviços */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+table caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--cor-texto);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+table thead tr {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: var(--cor-fundo);
+}
+
+table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* 5. Formulário de Contato */
+form {
+  margin-top: 1.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branca);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--cor-primaria);
+}
+
+/* 6. Estilos do Rodapé */
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: #333;
+  color: #aaa;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
