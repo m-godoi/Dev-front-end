@@ -1,14 +1,14 @@
-/* style.css */
+/* style.css (Recriado com base no site cocobambu.com) */
 
 /* 1. Reset Básico e Definições Globais */
 :root {
-  --cor-primaria: #7a7a72;
-  --cor-secundaria: #ff000081;
-  --cor-h3: #d34d00;
-  --cor-fundo: #f371076c;
-  --cor-texto: #5a1a1a;
-  --cor-branca: #d11b1b;
-  --cor-borda: #b60f5d;
+  /* Paleta de cores extraída e adaptada do site oficial */
+  --cor-dourada: #633b0d;
+  --cor-fundo-escuro: #ffffff;
+  --cor-fundo-card: #750404;
+  --cor-texto-claro: #070101;
+  --cor-texto-secundario: #a0a0a0;
+  --cor-borda-sutil: #420404;
 }
 
 * {
@@ -18,64 +18,88 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-  line-height: 1.6;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-texto-claro);
+  line-height: 1.8;
+  font-size: 16px;
 }
 
 /* 2. Estilos do Cabeçalho e Navegação */
 header {
-  background-color: var(--cor-primaria);
-  color: var(--cor-branca);
-  padding: 1rem 2rem;
+  background-color: var(--cor-fundo-escuro);
+  padding: 1.5rem 2rem;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--cor-borda-sutil);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
+  font-family: 'Playfair Display', serif;
+  color: var(--cor-dourada);
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
 
 header nav a {
-  color: var(--cor-branca);
+  color: var(--cor-texto-claro);
   text-decoration: none;
-  margin: 0 15px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  background-color: var(--cor-secundaria);
+  color: var(--cor-dourada);
 }
 
-/* 3. Conteúdo Principal */
+/* 3. Conteúdo Principal e Estrutura de Cartões */
 main {
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: var(--cor-branca);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Espaçamento entre os cartões */
 }
 
-main h2 {
-  color: var(--cor-primaria);
+/* A classe .card é a chave para replicar o layout */
+.card {
+  background-color: var(--cor-fundo-card);
+  padding: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--cor-borda-sutil);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--cor-dourada);
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--cor-fundo);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--cor-borda-sutil);
 }
 
-main h3 {
-    color: var(--cor-h3)
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--cor-texto-claro);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-main p {
+.card p {
     margin-bottom: 1rem;
+    color: var(--cor-texto-secundario);
+    max-width: 80ch; /* Melhora a legibilidade */
 }
 
-main img {
+.card img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -90,91 +114,113 @@ table {
 }
 
 table caption {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: var(--cor-texto);
+  display: none; /* O título já estará no h2 do card */
 }
 
 table th, table td {
-  padding: 12px 15px;
+  padding: 15px;
   text-align: left;
-  border-bottom: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda-sutil);
 }
 
-table thead tr {
-  background-color: var(--cor-primaria);
-  color: var(--cor-branca);
+table thead th {
+  color: var(--cor-dourada);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
-table tbody tr:nth-of-type(even) {
-  background-color: var(--cor-fundo);
+table tbody tr {
+    transition: background-color 0.3s ease;
 }
 
 table tbody tr:hover {
-  background-color: #e9ecef;
+  background-color: #252525;
 }
 
 /* 5. Formulário de Contato */
 form {
   margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espaço entre os campos */
 }
 
 form label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
 }
 
 form input[type="text"],
 form input[type="email"],
 form textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  border: 1px solid var(--cor-borda);
+  padding: 15px;
+  border: 1px solid var(--cor-borda-sutil);
   border-radius: 5px;
-  font-family: inherit;
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-texto-claro);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--cor-dourada);
+  box-shadow: 0 0 8px rgba(197, 164, 126, 0.2);
 }
 
 form textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 150px;
 }
 
+/* Botão principal (Call-to-Action) */
 form button {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-branca);
-  padding: 12px 20px;
+  background-color: var(--cor-dourada);
+  color: var(--cor-fundo-escuro);
+  padding: 15px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  align-self: flex-start; /* Alinha o botão à esquerda */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 form button:hover {
-  background-color: var(--cor-primaria);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* 6. Estilos do Rodapé */
 footer {
   text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
-  background-color: #333;
-  color: #aaa;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-texto-secundario);
+  border-top: 1px solid var(--cor-borda-sutil);
 }
 
 footer p {
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 footer a {
-  color: var(--cor-secundaria);
+  color: var(--cor-dourada);
   text-decoration: none;
+  font-weight: 500;
 }
 
 footer a:hover {
