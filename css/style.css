@@ -1,3 +1,8 @@
+/*
+  CSS da home do Como Bambu
+*/
+
+/* Cores do site pra gente não ter que ficar procurando depois */
 :root {
   --cor-fundo: #ffffff;
   --cor-texto-principal: #3a3a3a;
@@ -9,24 +14,25 @@
   --cor-branco: #ffffff;
   --cor-borda-sutil: #eeeeee;
   --fonte-principal: 'Montserrat', sans-serif;
-  --cor-foco-visivel: #005fcc;
+  --cor-foco-visivel: #005fcc; /* Borda azul pra quem usa teclado */
 }
 
+/* Reset básico pra começar do zero, sem margem de navegador atrapalhando */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Mágica pra padding não quebrar a largura das coisas */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Rolagem suave quando clica em link interno */
 }
 
 body {
   font-family: var(--fonte-principal);
   background-color: var(--cor-fundo);
   color: var(--cor-texto-principal);
-  line-height: 1.6;
+  line-height: 1.6; /* Deixa o texto mais fácil de ler */
 }
 
 img {
@@ -36,10 +42,11 @@ img {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* Tira o sublinhado dos links */
   color: inherit;
 }
 
+/* Classe pra centralizar o conteúdo e não deixar ele esticar até o infinito em telas grandes */
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -48,6 +55,12 @@ a {
   padding-right: 1rem;
 }
 
+
+/*
+   Coisas de Acessibilidade
+*/
+
+/* Link pra pular o menu, fica escondido e só aparece com a tecla Tab */
 .skip-to-content:focus {
   position: absolute;
   left: 6px; top: 6px;
@@ -59,12 +72,14 @@ a {
   border-radius: 5px;
 }
 
+/* Borda azul pra quem usa teclado saber onde tá clicando */
 a:focus, button:focus {
   outline: 3px solid var(--cor-foco-visivel);
   outline-offset: 2px;
   border-radius: 3px;
 }
 
+/* Botão padrão que a gente usa em vários lugares */
 .button {
   display: inline-block;
   background-color: var(--cor-ocre-botao);
@@ -76,28 +91,34 @@ a:focus, button:focus {
   font-size: 0.9rem;
   text-align: center;
   border: 2px solid transparent;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* Efeitinho de levantar */
   filter: brightness(1.1);
 }
 
+/*
+   Começa aqui o Mobile - Tudo empilhado primeiro
+*/
+
+/* --- Cabeçalho --- */
 header {
   background-color: var(--cor-branco);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* Sombrinha de leve */
 }
 
 header .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Um embaixo do outro no celular */
   align-items: center;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   gap: 1.5rem;
 }
 
+/* O h1 é o logo, então a gente reseta o estilo padrão dele */
 h1.header-logo {
   margin: 0;
   font-size: inherit;
@@ -110,7 +131,7 @@ h1.header-logo {
 
 .main-nav ul {
   display: flex;
-  list-style-type: none;
+  list-style-type: none; /* Tira as bolinhas da lista */
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -140,10 +161,6 @@ h1.header-logo {
   transition: filter 0.3s ease;
 }
 
-.button-header:hover {
-  filter: brightness(1.1);
-}
-
 .button-header:not(.delivery) {
   background-color: var(--cor-ocre-botao);
 }
@@ -152,14 +169,14 @@ h1.header-logo {
   background-color: var(--cor-amarelo-destaque);
 }
 
+
+/* Banner Principal (aquele verde) */
 .hero-banner {
-  /* Novo estilo para a imagem de fundo */
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/camarao.png');
+  /* Fundo da imagem com uma sombrinha pra dar pra ler o texto por cima */
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/camarao.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  /* Fim do novo estilo */
-
+  
   color: var(--cor-branco);
   text-align: center;
   padding: 3rem 0;
@@ -195,6 +212,7 @@ h1.header-logo {
   color: var(--cor-marrom-escuro);
 }
 
+/* Título padrão das seções (com a linhazinha embaixo) */
 .destaques h2, .content-section h2 {
   font-size: 1.8rem;
   color: var(--cor-texto-principal);
@@ -211,6 +229,7 @@ h1.header-logo {
   margin: 10px auto 2rem auto;
 }
 
+/* Seção dos Cards */
 .destaques {
   padding: 3rem 0;
 }
@@ -240,7 +259,7 @@ h1.header-logo {
 .card img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: cover; /* Faz a imagem preencher o espaço sem ficar achatada */
 }
 
 .card h3 {
@@ -259,6 +278,7 @@ h1.header-logo {
   margin-bottom: 2.5rem;
 }
 
+/* Seções de conteúdo (imagem + texto) */
 .content-section {
   padding: 3rem 0;
 }
@@ -278,7 +298,7 @@ h1.header-logo {
 }
 
 .content-section .container-texto h2::after {
-  margin: 10px 0 2rem 0;
+  margin: 10px 0 2rem 0; /* Alinha a linhazinha à esquerda */
 }
 
 .content-section .container-texto p {
@@ -287,9 +307,10 @@ h1.header-logo {
 }
 
 .cardapio {
-  background-color: #f7f7f7;
+  background-color: #f7f7f7; /* Cor de fundo diferente pra não ficar tudo branco */
 }
 
+/* Rodapé */
 footer {
   background-color: var(--cor-marrom-escuro);
   color: var(--cor-branco);
@@ -350,9 +371,13 @@ footer {
     color: #ccc;
 }
 
+
+/* 
+   Layout pra Tablet pra Cima (min-width: 768px)
+*/
 @media (min-width: 768px) {
   header .container {
-    flex-direction: row;
+    flex-direction: row; /* Header na horizontal */
     justify-content: space-between;
   }
   
@@ -361,15 +386,11 @@ footer {
   }
 
   .cards-wrapper {
-      flex-direction: row;
+      flex-direction: row; /* Cards lado a lado */
       justify-content: center;
       align-items: stretch;
       max-width: 800px;
       margin: 0 auto;
-  }
-
-  .destaques {
-    padding: 4rem 0;
   }
   
   .card {
@@ -377,25 +398,25 @@ footer {
     flex-direction: column;
   }
   .card p {
-    flex-grow: 1;
+    flex-grow: 1; /* Isso aqui alinha os botões dos cards quando um tem mais texto que o outro */
   }
   
   .content-section .container {
-    flex-direction: row;
+    flex-direction: row; /* Imagem e texto lado a lado */
     align-items: center;
     gap: 3rem;
   }
 
   .container-imagem, .container-texto {
-    flex: 1;
+    flex: 1; /* Cada um pega metade do espaço */
   }
   
   .cardapio .container {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Inverte a ordem pra fazer o zigue-zague */
   }
   
   .footer-principal {
-    flex-direction: row;
+    flex-direction: row; /* Colunas do rodapé lado a lado */
     justify-content: space-around;
     align-items: flex-start;
     text-align: left;
@@ -419,6 +440,9 @@ footer {
   }
 }
 
+/*
+   Layout pra Desktop (min-width: 1024px)
+*/
 @media (min-width: 1024px) {
   .header-logo img {
     height: 60px;
@@ -434,11 +458,8 @@ footer {
     font-size: 2.2rem;
   }
   
-  .destaques, .content-section {
-      padding: 5rem 0;
-  }
   .content-section .container-texto {
-    padding: 0 4rem;
+    padding: 0 4rem; /* Mais espaço pro texto respirar */
   }
   
   .footer-inferior img {
