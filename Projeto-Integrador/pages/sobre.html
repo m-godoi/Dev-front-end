@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ateliê | COSTURY ARTE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .header-page {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            padding: 3em 0 1em;
+            text-align: center;
+        }
+        .header-page h2 {
+            color: var(--color-secondary);
+            margin-bottom: 5px;
+        }
+        #quem-somos, #valores, #equipe {
+            padding: 4em 0;
+        }
+        #quem-somos p, #valores p {
+            max-width: 800px;
+            margin: 1em auto 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        #valores {
+            background-color: var(--color-text-light);
+            text-align: center;
+        }
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 2em;
+        }
+        .valor-item h4 {
+            font-family: var(--font-heading);
+            font-size: 1.4em;
+            margin-bottom: 5px;
+            color: var(--color-secondary);
+        }
+        #equipe .equipe-card {
+            max-width: 400px;
+            margin: 2em auto;
+            text-align: center;
+        }
+        .equipe-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .valores-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="../index.html">COSTURY ARTE</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="sobre.html" class="active">O Ateliê</a></li>
+                    <li><a href="contato.html" class="cta-nav">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre-header" class="header-page">
+            <div class="container">
+                <h2 class="section-title">COSTURY ARTE: Paixão pelo Caimento Perfeito</h2>
+                <p>Há 2 anos, dedicamos nossa arte a costura sob medida e à longevidade de suas peças.</p>
+            </div>
+        </section>
+
+        <section id="quem-somos">
+            <div class="container">
+                <h2 class="section-title">Nossa História</h2>
+                <p>Fundado por Mari, o COSTURY ARTE nasceu da crença de que a roupa deve se moldar ao corpo, e não o contrário. Iniciamos focados em ajustes e consertos de alta qualidade, ganhando confiança de clientes que buscavam precisão. Com o tempo e o estudo das técnicas de alfaiataria e modelagem, expandimos para a criação de vestidos de festa personalizados.</p>
+                <p>Nossa missão é simples: oferecer o melhor serviço, seja reformando uma peça essencial ou dando vida ao vestido dos seus sonhos.</p>
+            </div>
+        </section>
+
+        <section id="valores">
+            <div class="container">
+                <h2 class="section-title">O que nos move</h2>
+                <div class="valores-grid">
+                    <div class="valor-item">
+                        <h4>Exclusividade e Arte</h4>
+                        <p>Cada peça sob medida é única, refletindo a personalidade e o desejo da cliente com tecidos de qualidade e acabamento impecável.</p>
+                    </div>
+                    <div class="valor-item">
+                        <h4>Precisão e Confiança</h4>
+                        <p>Nos serviços de conserto, a precisão é nossa prioridade. Garantimos ajustes que parecem invisíveis, prolongando a vida útil de sua roupa.</p>
+                    </div>
+                    <div class="valor-item">
+                        <h4>Sustentabilidade</h4>
+                        <p>Acreditamos na moda consciente. Consertar e reformar é um ato de sustentabilidade, evitando o descarte e valorizando o que você já possui.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="equipe">
+            <div class="container">
+                <h2 class="section-title">Nossa Mestra Costureira</h2>
+                <div class="equipe-card">
+                    <h3>Jose Mari</h3>
+                    <p>Fundadora e Costureira-Chefe, com 5 anos de experiência em modelagem e costura. Sua paixão é traduzir tecidos em caimento perfeito.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <h4>COSTURY ARTE</h4>
+                <p>Ateliê de Costura | Desde 2023</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navegação</h5>
+                <ul>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h5>Contato</h5>
+                <p>St. O QNO 13 loja 02 - Ceilândia, Brasília - DF, 72255-311</p>
+                <p>Telefone: (61) 99669-8858</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 COSTURY ARTE. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
