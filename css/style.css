@@ -1,0 +1,468 @@
+/*
+  CSS da home do Como Bambu
+*/
+
+/* Cores do site pra gente não ter que ficar procurando depois */
+:root {
+  --cor-fundo: #ffffff;
+  --cor-texto-principal: #3a3a3a;
+  --cor-texto-secundario: #666666;
+  --cor-marrom-escuro: #4a1f18;
+  --cor-verde-principal: #006341;
+  --cor-amarelo-destaque: #f5b92e;
+  --cor-ocre-botao: #c5a47e;
+  --cor-branco: #ffffff;
+  --cor-borda-sutil: #eeeeee;
+  --fonte-principal: 'Montserrat', sans-serif;
+  --cor-foco-visivel: #005fcc; /* Borda azul pra quem usa teclado */
+}
+
+/* Reset básico pra começar do zero, sem margem de navegador atrapalhando */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Mágica pra padding não quebrar a largura das coisas */
+}
+
+html {
+  scroll-behavior: smooth; /* Rolagem suave quando clica em link interno */
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-principal);
+  line-height: 1.6; /* Deixa o texto mais fácil de ler */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none; /* Tira o sublinhado dos links */
+  color: inherit;
+}
+
+/* Classe pra centralizar o conteúdo e não deixar ele esticar até o infinito em telas grandes */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+/*
+   Coisas de Acessibilidade
+*/
+
+/* Link pra pular o menu, fica escondido e só aparece com a tecla Tab */
+.skip-to-content:focus {
+  position: absolute;
+  left: 6px; top: 6px;
+  padding: 15px 25px;
+  background-color: var(--cor-marrom-escuro);
+  color: var(--cor-branco);
+  font-weight: bold;
+  z-index: 1001;
+  border-radius: 5px;
+}
+
+/* Borda azul pra quem usa teclado saber onde tá clicando */
+a:focus, button:focus {
+  outline: 3px solid var(--cor-foco-visivel);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Botão padrão que a gente usa em vários lugares */
+.button {
+  display: inline-block;
+  background-color: var(--cor-ocre-botao);
+  color: var(--cor-branco);
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px); /* Efeitinho de levantar */
+  filter: brightness(1.1);
+}
+
+/*
+   Começa aqui o Mobile - Tudo empilhado primeiro
+*/
+
+/* --- Cabeçalho --- */
+header {
+  background-color: var(--cor-branco);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* Sombrinha de leve */
+}
+
+header .container {
+  display: flex;
+  flex-direction: column; /* Um embaixo do outro no celular */
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+/* O h1 é o logo, então a gente reseta o estilo padrão dele */
+h1.header-logo {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.header-logo img {
+  height: 45px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style-type: none; /* Tira as bolinhas da lista */
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-nav a {
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--cor-ocre-botao);
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.button-header {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cor-branco);
+  transition: filter 0.3s ease;
+}
+
+.button-header:not(.delivery) {
+  background-color: var(--cor-ocre-botao);
+}
+
+.button-header.delivery {
+  background-color: var(--cor-amarelo-destaque);
+}
+
+
+/* Banner Principal (aquele verde) */
+.hero-banner {
+  /* Fundo da imagem com uma sombrinha pra dar pra ler o texto por cima */
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/camarao.png');
+  background-size: cover;
+  background-position: center;
+  
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 3rem 0;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero-banner h2 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--cor-amarelo-destaque);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-banner p {
+  font-size: 0.9rem;
+  max-width: 320px;
+}
+
+.hero-banner .button {
+  background-color: var(--cor-amarelo-destaque);
+  color: var(--cor-marrom-escuro);
+}
+
+/* Título padrão das seções (com a linhazinha embaixo) */
+.destaques h2, .content-section h2 {
+  font-size: 1.8rem;
+  color: var(--cor-texto-principal);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.destaques h2::after, .content-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--cor-ocre-botao);
+  margin: 10px auto 2rem auto;
+}
+
+/* Seção dos Cards */
+.destaques {
+  padding: 3rem 0;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.card {
+  background-color: var(--cor-marrom-escuro);
+  color: var(--cor-branco);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Faz a imagem preencher o espaço sem ficar achatada */
+}
+
+.card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.card p {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+.card .button {
+  margin-bottom: 2.5rem;
+}
+
+/* Seções de conteúdo (imagem + texto) */
+.content-section {
+  padding: 3rem 0;
+}
+
+.content-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-section .container-texto {
+  text-align: left;
+}
+
+.content-section .container-texto h2 {
+  text-align: left;
+}
+
+.content-section .container-texto h2::after {
+  margin: 10px 0 2rem 0; /* Alinha a linhazinha à esquerda */
+}
+
+.content-section .container-texto p {
+  color: var(--cor-texto-secundario);
+  margin-bottom: 2rem;
+}
+
+.cardapio {
+  background-color: #f7f7f7; /* Cor de fundo diferente pra não ficar tudo branco */
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor-marrom-escuro);
+  color: var(--cor-branco);
+  padding: 3rem 0;
+}
+
+.footer-principal {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.footer-coluna h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-coluna ul {
+  list-style-type: none;
+}
+
+.footer-coluna li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-coluna a {
+  color: #ccc;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-coluna a:hover {
+  color: var(--cor-ocre-botao);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-inferior {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-inferior img {
+  height: 60px;
+  margin: 0 auto 1rem auto;
+}
+
+.footer-inferior p {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+
+/* 
+   Layout pra Tablet pra Cima (min-width: 768px)
+*/
+@media (min-width: 768px) {
+  header .container {
+    flex-direction: row; /* Header na horizontal */
+    justify-content: space-between;
+  }
+  
+  .header-logo img {
+    height: 50px;
+  }
+
+  .cards-wrapper {
+      flex-direction: row; /* Cards lado a lado */
+      justify-content: center;
+      align-items: stretch;
+      max-width: 800px;
+      margin: 0 auto;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card p {
+    flex-grow: 1; /* Isso aqui alinha os botões dos cards quando um tem mais texto que o outro */
+  }
+  
+  .content-section .container {
+    flex-direction: row; /* Imagem e texto lado a lado */
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .container-imagem, .container-texto {
+    flex: 1; /* Cada um pega metade do espaço */
+  }
+  
+  .cardapio .container {
+    flex-direction: row-reverse; /* Inverte a ordem pra fazer o zigue-zague */
+  }
+  
+  .footer-principal {
+    flex-direction: row; /* Colunas do rodapé lado a lado */
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .footer-coluna h3, .footer-coluna ul {
+      text-align: left;
+  }
+  .social-icons {
+    justify-content: flex-start;
+  }
+
+  .footer-inferior {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .footer-inferior img {
+    height: 70px;
+    margin: 0;
+  }
+}
+
+/*
+   Layout pra Desktop (min-width: 1024px)
+*/
+@media (min-width: 1024px) {
+  .header-logo img {
+    height: 60px;
+  }
+  
+  .hero-banner {
+    min-height: 450px;
+  }
+  .hero-banner h2 {
+    font-size: 3.5rem;
+  }
+  .destaques h2, .content-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .content-section .container-texto {
+    padding: 0 4rem; /* Mais espaço pro texto respirar */
+  }
+  
+  .footer-inferior img {
+      height: 80px;
+  }
+}
