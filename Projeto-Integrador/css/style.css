@@ -152,7 +152,9 @@ nav ul li a.active::after {
     justify-content: center;
     text-align: center;
     /* Imagem de fundo deve ser adicionada aqui usando CSS ou HTML */
-    /* background-image: url('../img/hero-festa.jpg'); */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/TecidoTitulo.png');
     background-size: cover;
     background-position: center;
 }
@@ -250,12 +252,14 @@ nav ul li a.active::after {
     text-align: center;
 }
 
+/* *** ÚNICA ALTERAÇÃO LÓGICA FEITA AQUI *** */
 .portfolio-item img {
     width: 100%;
-    height: auto;
+    height: 300px; /* Define uma altura fixa */
+    object-fit: cover; /* Preenche o espaço sem distorcer */
     display: block;
     margin-bottom: 10px;
-    /* Use 'object-fit: cover;' se as imagens não tiverem o mesmo tamanho */
+    border-radius: 8px; /* Bônus de estilo */
 }
 
 .portfolio-item h4 {
@@ -412,7 +416,7 @@ footer ul li a:hover {
 @media (min-width: 769px) and (max-width: 1024px) {
     
     .container {
-        width: 90%; 
+        width: 90%;
     }
 
     #hero h2 {
