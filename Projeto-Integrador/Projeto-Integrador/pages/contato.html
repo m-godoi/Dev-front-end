@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato e Orçamento | COSTURY ARTE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="../index.html">COSTURY ARTE</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="sobre.html">O Ateliê</a></li>
+                    <li><a href="contato.html" class="cta-nav active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contato-header" class="header-page">
+            <div class="container">
+                <h2 class="section-title">Inicie Seu Projeto Conosco</h2>
+                <p>Preencha o formulário para uma consulta inicial ou utilize os contatos abaixo para um serviço rápido.</p>
+            </div>
+        </section>
+
+        <section id="contato-info">
+            <div class="container dual-columns">
+                <div class="col-form">
+                    <h3 class="form-title">Solicitação de Orçamento</h3>
+                    <p class="form-description">Conte-nos sobre a peça desejada (criação ou conserto), tecidos e o prazo ideal.</p>
+                    
+                    <form action="#" method="POST" class="custom-form">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="telefone">Telefone (WhatsApp):</label>
+                        <input type="tel" id="telefone" name="telefone">
+
+                        <label for="tipo_servico">Tipo de Serviço (Alta Costura, Conserto ou Ajuste):</label>
+                        <input type="text" id="tipo_servico" name="tipo_servico" required>
+
+                        <label for="descricao">Descreva a Peça e o Serviço Desejado:</label>
+                        <textarea id="descricao" name="descricao" rows="5" required></textarea>
+                        
+                        <button type="submit" class="btn btn-primary">Enviar Solicitação</button>
+                    </form>
+                </div>
+
+                <div class="col-map-info">
+                    <h3 class="contact-title">Contato Rápido e Ateliê</h3>
+                    
+                    <div class="contact-item">
+                        <p class="label">WhatsApp</p>
+                        <p class="value-highlight">(61) 99669-8858</p>
+                        <a href="https://wa.me/61996698858" target="_blank" class="btn btn-secondary">Chamar no WhatsApp</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <p class="label">Horário de Funcionamento</p>
+                        <p class="value-highlight">Seg - Sex: 9h às 18h | Sáb: 9h às 17h</p>
+                    </div>
+
+                    <h3 class="contact-title map-title-margin">Onde Nos Encontrar</h3>
+                    
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/@-15.7883568,-48.1300083,52m/data=!3m1!1e3?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <p class="map-address-text">
+                        St. O QNO 13 loja 02 - Ceilândia, Brasília - DF, 72255-311<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <h4>COSTURY ARTE</h4>
+                <p>Ateliê de Costura | Desde 2023</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navegação</h5>
+                <ul>
+                    <li><a href="sobre.html">O Ateliê</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h5>Contato</h5>
+                <p>St. O QNO 13 loja 02 - Ceilândia, Brasília - DF, 72255-311</p>
+                <p>Telefone: (61) 99669-8858</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 COSTURY ARTE. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
