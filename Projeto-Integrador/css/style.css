@@ -1,4 +1,4 @@
-/* Definição das Variáveis de Cores */
+/* Definição das Variáveis de Cores e Fontes */
 :root {
     --color-primary: #1D1D1D; /* Preto / Grafite Escuro */
     --color-secondary: #B8860B; /* Dourado / Bronze (Acento) */
@@ -113,7 +113,7 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a::after { /* Sublinhado sutil para navegação */
+nav ul li a::after { 
     content: '';
     position: absolute;
     width: 0;
@@ -142,19 +142,18 @@ nav ul li a.active::after {
 }
 
 
-/* SEÇÃO HERO */
+/* SEÇÃO HERO (index.html) */
 #hero {
-    background: var(--color-primary); /* Fundo escuro para luxo */
+    background: var(--color-primary); 
     color: var(--color-text-light);
-    height: 70vh; /* Altura para destaque visual */
+    height: 70vh; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Imagem de fundo deve ser adicionada aqui usando CSS ou HTML */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../img/TecidoTitulo.png');
+        url('img/TecidoTitulo.png'); 
     background-size: cover;
     background-position: center;
 }
@@ -162,7 +161,6 @@ nav ul li a.active::after {
 .hero-content {
     max-width: 700px;
     padding: 20px;
-    /* Efeito de sombreamento sutil se usar imagem de fundo */
 }
 
 #hero h2 {
@@ -176,67 +174,49 @@ nav ul li a.active::after {
     margin-bottom: 30px;
 }
 
-.hero-actions .btn {
-    margin: 0 10px;
-    color: var(--color-text-light); /* Botões escuros no fundo escuro */
-    border-color: var(--color-secondary);
-}
-.hero-actions .btn-primary {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+/* Layout de Colunas (Usado em Contato e História) */
+.dual-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
 }
 
+.col-texto, 
+.col-imagem,
+.col-form,
+.col-map-info {
+    flex-basis: 50%;
+}
 
-/* SEÇÃO DE SEGMENTAÇÃO (Dual) */
-#servicos-duais {
+/* SEÇÃO HISTÓRIA CHAMADA (index.html) */
+#historia-chamada {
     padding: 5em 0;
     background-color: var(--color-background);
 }
-
-#servicos-duais .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+.historia-container {
+    align-items: center !important;
+}
+.historia-title {
+    text-align: left !important;
+    margin-bottom: 0 !important;
+}
+.historia-p-1 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+.historia-p-2 {
+    margin-bottom: 2em;
+}
+.historia-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; 
 }
 
-.servico-card {
-    flex-basis: 50%;
-    padding: 30px;
-    text-align: center;
-    border: 1px solid var(--color-text-light);
-    transition: box-shadow 0.3s;
-}
 
-.servico-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.servico-card h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: var(--color-primary);
-}
-
-.card-festa {
-    background-color: var(--color-text-light);
-}
-
-.card-conserto {
-    background-color: var(--color-background);
-}
-
-.servico-card a {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--color-secondary);
-    text-decoration: none;
-    font-weight: 700;
-}
-.servico-card a:hover {
-    text-decoration: underline;
-}
-
-/* PORTFÓLIO DE DESTAQUE */
+/* PORTFÓLIO DE DESTAQUE (index.html) */
 #portfolio-destaque {
     padding: 5em 0;
     background-color: var(--color-text-light);
@@ -252,23 +232,22 @@ nav ul li a.active::after {
     text-align: center;
 }
 
-/* *** ÚNICA ALTERAÇÃO LÓGICA FEITA AQUI *** */
 .portfolio-item img {
     width: 100%;
-    height: 300px; /* Define uma altura fixa */
-    object-fit: cover; /* Preenche o espaço sem distorcer */
+    height: 300px; 
+    object-fit: cover; 
     display: block;
     margin-bottom: 10px;
-    border-radius: 8px; /* Bônus de estilo */
+    border-radius: 8px; 
 }
 
 .portfolio-item h4 {
     font-family: var(--font-heading);
     font-size: 1.1em;
-    font-weight: 400; /* Mais leve para títulos de galeria */
+    font-weight: 400;
 }
 
-/* CHAMADA PARA CONTATO (Callout) */
+/* CHAMADA PARA CONTATO (Callout) (index.html) */
 #contato-callout {
     background-color: var(--color-primary);
     color: var(--color-text-light);
@@ -282,7 +261,124 @@ nav ul li a.active::after {
     margin-bottom: 10px;
 }
 
-/* FOOTER */
+
+/* CSS ESPECÍFICO PARA PÁGINAS (sobre.html e contato.html) */
+
+/* Header Page Padrão (sobre.html e contato.html) */
+.header-page {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 3em 0 1em;
+    text-align: center;
+}
+.header-page h2 {
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+
+
+/* SOBRE.HTML */
+#quem-somos, #valores, #equipe {
+    padding: 4em 0;
+}
+#quem-somos p, #valores p {
+    max-width: 800px;
+    margin: 1em auto 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+#valores {
+    background-color: var(--color-text-light);
+    text-align: center;
+}
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 2em;
+}
+.valor-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: var(--color-secondary);
+}
+#equipe .equipe-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+}
+.equipe-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.sobre-subtitle {
+    font-size: 1em;
+}
+
+
+/* CONTATO.HTML */
+#contato-info {
+    padding: 4em 0;
+}
+
+.form-title {
+    color: var(--color-secondary);
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+.custom-form input, .custom-form textarea {
+    width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;
+}
+
+.contact-title {
+    font-size: 1.8em; margin-bottom: 1.5em; color: var(--color-primary);
+}
+.map-title-margin {
+    margin-top: 2em;
+}
+.contact-item {
+    margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #eee;
+}
+.contact-item .label {
+    font-weight: 700; color: #666; font-size: 0.9em; text-transform: uppercase; margin-bottom: 3px;
+}
+.contact-item .value-highlight {
+    font-size: 1.2em; color: var(--color-primary); margin-bottom: 10px;
+}
+
+.map-container {
+    margin-top: 30px;
+    overflow: hidden;
+    padding-bottom: 56.25%; 
+    position: relative;
+    height: 0;
+    border: 5px solid var(--color-secondary); 
+}
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.map-address-text {
+    text-align: center; margin-top: 10px; font-size: 0.9em;
+}
+
+/* CSS para Mensagens de Erro do JavaScript (para contato.html) */
+.custom-form .error-message {
+    font-size: 0.8em;
+    color: red;
+    margin-top: -10px; 
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* FOOTER (CORRIGIDO) */
 footer {
     background-color: var(--color-primary);
     color: var(--color-text-light);
@@ -291,7 +387,7 @@ footer {
 }
 
 footer .container {
-    display: flex;
+    display: flex; /* ATIVA O LAYOUT DE COLUNAS */
     justify-content: space-between;
     gap: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -307,7 +403,8 @@ footer h4, footer h5 {
 }
 
 footer ul {
-    list-style: none;
+    list-style: none !important; /* FORÇA A REMOÇÃO DOS MARCADORES DE LISTA */
+    padding-left: 0; /* Remove padding padrão de listas */
 }
 
 footer ul li a {
@@ -325,66 +422,15 @@ footer ul li a:hover {
     opacity: 0.7;
 }
 
+
+/* ========================================= */
+/* RESPONSIVIDADE (MEDIA QUERIES)            */
+/* ========================================= */
+
 @media (max-width: 768px) {
     
-    /* GERAL */
     .container {
-        width: 95%; /* Aumenta o espaço útil em telas pequenas */
-    }
-
-    /* HEADER */
-    header .container {
-        flex-direction: column; /* Coloca logo e navegação em coluna */
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column; /* Menu em lista vertical */
-        margin-top: 15px;
-    }
-
-    nav ul li a {
-        margin: 5px 0; /* Espaçamento vertical entre itens do menu */
-    }
-
-    .cta-nav {
-        margin: 10px auto !important; /* Centraliza e adiciona espaço */
-        display: block; /* Ocupa a largura total para toque */
-    }
-
-    /* HERO SECTION */
-    #hero {
-        height: auto; /* Altura automática para conteúdo */
-        padding: 4em 0;
-    }
-    
-    #hero h2 {
-        font-size: 2.2em; /* Reduz o tamanho da fonte */
-    }
-
-    .hero-actions {
-        display: flex; /* Mantém os botões lado a lado se couber */
-        flex-direction: column; /* Quebra em coluna se não couber */
-        gap: 15px;
-    }
-
-    /* SEGMENTAÇÃO (DUAL) */
-    #servicos-duais .container {
-        flex-direction: column; /* Coloca os cards de serviço um abaixo do outro */
-        gap: 20px;
-    }
-    
-    .servico-card {
-        flex-basis: 100%; /* Ocupa a largura total */
-    }
-
-    /* PORTFÓLIO DE DESTAQUE */
-    #portfolio-destaque {
-        padding: 3em 0;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Transforma em uma única coluna */
+        width: 95%; 
     }
     
     h2.section-title {
@@ -392,7 +438,61 @@ footer ul li a:hover {
         margin-bottom: 1.5em;
     }
 
-    /* CHAMADA PARA CONTATO */
+    /* HEADER */
+    header .container {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        margin-top: 15px;
+    }
+
+    nav ul li a {
+        margin: 5px 0; 
+    }
+
+    .cta-nav {
+        margin: 10px auto !important; 
+        display: block; 
+    }
+
+    /* HERO */
+    #hero {
+        height: auto; 
+        padding: 4em 0;
+    }
+    
+    #hero h2 {
+        font-size: 2.2em; 
+    }
+
+    .hero-actions {
+        display: flex; 
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    /* COLUNAS EM PILHA */
+    .dual-columns {
+        flex-direction: column; 
+        gap: 30px;
+    }
+    
+    .col-texto, .col-imagem, .col-form, .col-map-info {
+        flex-basis: 100%; 
+    }
+
+    /* GALERIA E CALLOUTS */
+    #portfolio-destaque {
+        padding: 3em 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; 
+    }
+    
     #contato-callout {
         padding: 3em 0;
     }
@@ -400,16 +500,19 @@ footer ul li a:hover {
         font-size: 1.8em;
     }
 
-    /* FOOTER */
+    /* FOOTER (MÓVEL) */
     footer .container {
-        flex-direction: column; /* Coloca as colunas do footer em pilha */
+        flex-direction: column; /* Força o empilhamento vertical no mobile */
         text-align: center;
         gap: 30px;
     }
     
-    footer ul li a {
-        margin: 5px 0;
-        display: inline-block; /* Alinha o texto das listas */
+    footer ul {
+        text-align: center;
+        padding-left: 0;
+    }
+    footer ul li {
+        display: block;
     }
 }
 
@@ -423,12 +526,8 @@ footer ul li a:hover {
         font-size: 3em;
     }
 
-    #servicos-duais .container {
-        gap: 15px; /* Reduz um pouco o espaçamento lateral */
-    }
-
     .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* Mantém duas colunas (ou três, se for o caso) */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 20px;
     }
 }

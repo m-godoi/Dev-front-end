@@ -8,60 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        .header-page {
-            background-color: var(--color-primary);
-            color: var(--color-text-light);
-            padding: 3em 0 1em;
-            text-align: center;
-        }
-        .header-page h2 {
-            color: var(--color-secondary);
-            margin-bottom: 5px;
-        }
-        #quem-somos, #valores, #equipe {
-            padding: 4em 0;
-        }
-        #quem-somos p, #valores p {
-            max-width: 800px;
-            margin: 1em auto 0;
-            text-align: center;
-            font-size: 1.1em;
-        }
-        #valores {
-            background-color: var(--color-text-light);
-            text-align: center;
-        }
-        .valores-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 2em;
-        }
-        .valor-item h4 {
-            font-family: var(--font-heading);
-            font-size: 1.4em;
-            margin-bottom: 5px;
-            color: var(--color-secondary);
-        }
-        #equipe .equipe-card {
-            max-width: 400px;
-            margin: 2em auto;
-            text-align: center;
-        }
-        .equipe-card img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-        @media (max-width: 768px) {
-            .valores-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -82,15 +28,15 @@
         <section id="sobre-header" class="header-page">
             <div class="container">
                 <h2 class="section-title">COSTURY ARTE: Paixão pelo Caimento Perfeito</h2>
-                <p>Há 2 anos, dedicamos nossa arte a costura sob medida e à longevidade de suas peças.</p>
+                <p class="sobre-subtitle">Há 2 anos, dedicamos nossa arte a costura sob medida e à longevidade de suas peças.</p>
             </div>
         </section>
 
         <section id="quem-somos">
             <div class="container">
                 <h2 class="section-title">Nossa História</h2>
-                <p>Fundado por Mari, o COSTURY ARTE nasceu da crença de que a roupa deve se moldar ao corpo, e não o contrário. Iniciamos focados em ajustes e consertos de alta qualidade, ganhando confiança de clientes que buscavam precisão. Com o tempo e o estudo das técnicas de alfaiataria e modelagem, expandimos para a criação de vestidos de festa personalizados.</p>
-                <p>Nossa missão é simples: oferecer o melhor serviço, seja reformando uma peça essencial ou dando vida ao vestido dos seus sonhos.</p>
+                <p class="quem-somos-p-1">Fundado por Mari, o COSTURY ARTE nasceu da crença de que a roupa deve se moldar ao corpo, e não o contrário. Iniciamos focados em ajustes e consertos de alta qualidade, ganhando confiança de clientes que buscavam precisão. Com o tempo e o estudo das técnicas de alfaiataria e modelagem, expandimos para a criação de vestidos de festa personalizados.</p>
+                <p class="quem-somos-p-2">Nossa missão é simples: oferecer o melhor serviço, seja reformando uma peça essencial ou dando vida ao vestido dos seus sonhos.</p>
             </div>
         </section>
 
@@ -134,7 +80,7 @@
             <div class="footer-links">
                 <h5>Navegação</h5>
                 <ul>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="sobre.html">O Ateliê</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
@@ -146,6 +92,8 @@
         </div>
         <p class="copyright">© 2025 COSTURY ARTE. Todos os direitos reservados.</p>
     </footer>
+    
+    <script src="../js/script.js"></script>
 
 </body>
 </html>
