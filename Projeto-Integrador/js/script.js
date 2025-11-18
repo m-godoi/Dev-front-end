@@ -1,4 +1,36 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", () => {
+    const isPages = window.location.pathname.includes("/pages/");
+    const prefix = isPages ? "../" : "./";
+
+    function loadHTML(id, file) {
+        fetch(prefix + file)
+            .then(response => {
+                if (!response.ok) throw new Error("Erro ao carregar componente");
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById(id).innerHTML = data;
+                if (isPages) {
+                    const container = document.getElementById(id);
+                    const links = container.querySelectorAll("a");
+                    
+                    links.forEach(link => {
+                        const href = link.getAttribute("href");
+                        if (href === "index.html") {
+                            link.setAttribute("href", "../index.html");
+                        } 
+                        else if (href && href.includes("pages/")) {
+                            link.setAttribute("href", href.replace("pages/", ""));
+                        }
+                    });
+                }
+            })
+            .catch(err => console.error("Erro:", err));
+    }
+
+    loadHTML("header-container", "componentes/header.html");
+    loadHTML("footer-container", "componentes/footer.html");
+
     const form = document.querySelector('.custom-form');
     
     if (form) {
@@ -34,43 +66,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.style.borderColor = '#ccc';
             }
 
-            
-            if (nome.value.trim() === '') {
-                setError(nome, 'Por favor, insira seu nome.');
-            } else {
-                clearError(nome);
-            }
+           if (nome.value.trim() === '') setError(nome, 'Por favor, insira seu nome.');
+            else clearError(nome);
 
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value.trim())) {
-                setError(email, 'Insira um e-mail válido.');
-            } else {
-                clearError(email);
-            }
+            if (!emailRegex.test(email.value.trim())) setError(email, 'Insira um e-mail válido.');
+            else clearError(email);
 
-            if (descricao.value.trim().length < 10) {
-                setError(descricao, 'Descreva seu projeto em mais detalhes (mínimo 10 caracteres).');
-            } else {
-                clearError(descricao);
-            }
+            if (descricao.value.trim().length < 10) setError(descricao, 'Descreva com mais detalhes (mínimo 10 letras).');
+            else clearError(descricao);
             
-             if (tipoServico.value.trim() === '') {
-                setError(tipoServico, 'Indique o tipo de serviço desejado.');
-            } else {
-                clearError(tipoServico);
-            }
+             if (tipoServico.value.trim() === '') setError(tipoServico, 'Indique o tipo de serviço.');
+            else clearError(tipoServico);
             
             if (isValid) {
-                alert('Sua solicitação foi enviada com sucesso! Em breve entraremos em contato.');
+                alert('Solicitação enviada com sucesso! Entraremos em contato.');
                 form.reset(); 
             }
         });
     }
 });
-
-function toggleMobileMenu() {
-    const navUl = document.querySelector('header nav ul');
-    if (navUl) {
-        navUl.classList.toggle('menu-open'); 
-    }
-}
