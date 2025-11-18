@@ -99,7 +99,6 @@ Projeto-Integrador/
 
 | Data | Responsável | Etapa Realizada | Status |
 | :--- | :--- | :--- | :--- |
-| 20/10/2025 | Matheus | Definição de Escopo, Público-Alvo e Identidade Visual (Figma). | Concluído |
 | 20/10/2025 | Melyssa | Estrutura HTML completa (`index.html`, `sobre.html`, `contato.html`) e aplicação de HTML Semântico. | Concluído |
 | 20/10/2025 | Melyssa | Criação e Refinamento do `style.css` (Identidade Visual, Responsividade e Layout). | Concluído |
 | 24/10/2025 | Melyssa | Adição da pasta `js/` e do `script.js` (Validação de Formulário e Menu Mobile). | Concluído |
