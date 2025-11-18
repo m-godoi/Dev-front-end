@@ -11,8 +11,6 @@ O site continua sendo uma **vitrine digital** para reforçar a imagem de marca s
 | **Integrantes** | Melyssa e Matheus |
 | **Papéis** | **Melyssa**: Desenvolvimento Front-end (Modularização JS, CSS Responsivo). **Matheus**: Design UX/UI, Documentação e Testes de Usabilidade. |
 | **Tecnologias** | HTML5 Semântico, CSS3 (Flexbox/Grid), **JavaScript (Fetch API & DOM Manipulation)**. |
-| **Link do Protótipo (Figma)** | [Link indisponível temporariamente] |
-| **Link do Site Publicado** | https://m-godoi.github.io/Dev-front-end/ |
 
 ---
 
