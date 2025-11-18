@@ -1,44 +1,33 @@
-COSTURY ARTE: Ateliê de Costura e Alta Costura
+# COSTURY ARTE: Ateliê de Costura e Alta Costura
 
-## Visão Geral do Projeto (Fase 1: Planejamento e Estrutura)
+## Visão Geral do Projeto (Fase 2: Modularização e Refinamento)
 
-Este projeto consiste na criação de um site web estático e vendável para o **COSTURY ARTE**, um ateliê de costura real que equilibra serviços de ajustes com a costura personalizada (vestidos de festa e sob medida).
+Este projeto consiste na evolução do site web para o **COSTURY ARTE**, um ateliê de costura real. Nesta **Parte 2**, o foco foi a profissionalização do código através da **modularização de componentes**, aprimoramento da **acessibilidade** e garantia de **responsividade total**.
 
-O site foi desenvolvido como uma **vitrine digital** para reforçar a imagem de marca sofisticada e facilitar o contato direto para orçamentos, atendendo ao requisito de ser um site vendável.
+O site continua sendo uma **vitrine digital** para reforçar a imagem de marca sofisticada, mas agora com uma arquitetura de código escalável e profissional.
 
 | Item | Detalhe |
 | :--- | :--- |
 | **Integrantes** | Melyssa e Matheus |
-| **Papéis (Baseado no fluxo de trabalho)** | **Melyssa**: Desenvolvimento HTML/CSS/JS, Versionamento e Publicação. **Matheus**: Design UX/UI, Prototipação Figma e Documentação. |
-| **Tecnologias** | HTML (Semântico), CSS (Responsivo), **JavaScript (Interatividade)**. |
-| **Link do Protótipo (Figma)** | O Figma tá fora de área |
-| **Link do Site Publicado (GitHub Pages)** | https://m-godoi.github.io/Dev-front-end/ |
+| **Papéis** | **Melyssa**: Desenvolvimento Front-end (Modularização JS, CSS Responsivo). **Matheus**: Design UX/UI, Documentação e Testes de Usabilidade. |
+| **Tecnologias** | HTML5 Semântico, CSS3 (Flexbox/Grid), **JavaScript (Fetch API & DOM Manipulation)**. |
+| **Link do Protótipo (Figma)** | [Link indisponível temporariamente] |
+| **Link do Site Publicado** | https://m-godoi.github.io/Dev-front-end/ |
 
 ---
 
 ## 1. Escolha do Tema e Definição do Escopo
 
 ### Negócio Escolhido
-
-- **Nome:** COSTURY ARTE - Ateliê de Costura. 
+- **Nome:** COSTURY ARTE - Ateliê de Costura.
 - **Informações Reais Usadas:** Fundado em **2023** por Jose Mari, Endereço **St. O QNO 13 loja 02 - Ceilândia, Brasília - DF, 72255-311**.
 
 ### Potencial de Negócio (Justificativa)
-
-O site é fundamental para o negócio, pois constrói a **credibilidade e percepção** necessárias para vender vestidos de festa sob medida. 
-Ao utilizar um design elegante e com foco na qualidade (dourado e preto), ele atrai o cliente de alto valor. 
-A centralização das informações de contato no formato de "Contato" simplifica o funil de vendas e profissionaliza o atendimento.
+O site é fundamental para o negócio, pois constrói a **credibilidade e percepção** necessárias para vender vestidos de festa sob medida. Ao utilizar um design elegante e com foco na qualidade (dourado e preto), ele atrai o cliente de alto valor. A centralização das informações de contato no formato de "Contato" simplifica o funil de vendas.
 
 ### Público-Alvo
-
-1. **Alta Costura:** Clientes que buscam exclusividade para eventos (vestidos de festa/noivas). 
+1. **Alta Costura:** Clientes que buscam exclusividade para eventos (vestidos de festa/noivas).
 2. **Consertos:** Público local que prioriza agilidade, confiança e caimento perfeito em ajustes diários.
-
-### Páginas Principais (Mínimo Atendido)
-
-1. **Home (`index.html`):** Apresentação da marca, galeria de destaque e chamada direta para contato. 
-2. **O Ateliê (`pages/sobre.html`):** História, valores e apresentação da fundadora. 
-3. **Contato/Orçamento (`pages/contato.html`):** Formulário de *briefing* inicial, contatos rápidos e **mapa de localização**.
 
 ---
 
@@ -50,46 +39,60 @@ Todas as escolhas visuais foram feitas para comunicar **Profissionalismo e Confi
 | :--- | :--- | :--- |
 | **Paleta de Cores** | **Primária:** `#1D1D1D` (Grafite/Preto). **Acento:** `#B8860B` (Dourado/Bronze). | O contraste **Grafite e Dourado** é o padrão atemporal da **alta costura e marcas de luxo**, conferindo imediatamente sofisticação e peso à marca, justificando o valor dos serviços. |
 | **Tipografia** | **Títulos:** `Playfair Display` (Serifada). **Corpo:** `Montserrat` (Sans-serif). | A fonte serifada (`Playfair Display`) em títulos evoca elegância e arte. A `Montserrat` no corpo garante uma leitura moderna, limpa e de alta **legibilidade** para formulários e informações de contato. |
-| **Layout** | **Estrutura:** Abundância de espaço em branco (*whitespace*) e layouts em colunas duplas (`dual-columns`). | O espaçamento amplo é característico de sites *premium*, focando a atenção nos detalhes (galeria) e nas mensagens-chave. O uso de colunas organiza o conteúdo de forma lógica, especialmente separando o formulário das informações de mapa/contato. |
-| **Botões (CTA)** | Destaque máximo na cor **Dourada** (`btn-primary`). | O Dourado é usado como **cor de conversão**, garantindo que as ações mais importantes para o negócio ("Solicitar Orçamento" e "Fale Conosco Agora") sejam o primeiro elemento que o usuário nota na tela. |
-| **Responsividade** | Implementação completa de `Media Queries` no `style.css`. | Garante a usabilidade em dispositivos móveis. O layout quebra de colunas para **pilhas verticais** em telas pequenas, mantendo a navegação e o conteúdo fáceis de visualizar e interagir. |
+| **Layout** | **Estrutura:** Abundância de espaço em branco (*whitespace*) e layouts em colunas duplas (`dual-columns`). | O espaçamento amplo é característico de sites *premium*, focando a atenção nos detalhes (galeria) e nas mensagens-chave. O uso de colunas organiza o conteúdo de forma lógica, separando visualmente textos de imagens. |
+| **Botões (CTA)** | Destaque máximo na cor **Dourada** (`btn-primary`). | O Dourado é usado como **cor de conversão**, garantindo que as ações mais importantes ("Solicitar Orçamento") sejam o primeiro elemento que o usuário nota. |
+| **Responsividade** | Implementação completa de `Media Queries` no `responsive.css`. | Garante a usabilidade em dispositivos móveis. O layout quebra de colunas para **pilhas verticais** em telas pequenas, e as imagens se ajustam sem distorção (`aspect-ratio`). |
 
 ---
 
-## 3. Interatividade (Fase 2: JavaScript)
+## 3. Evolução Técnica (Parte 2: JavaScript e Modularização)
 
-O JavaScript foi introduzido para aprimorar a usabilidade e a qualidade dos dados submetidos pelo usuário, garantindo uma experiência mais profissional.
+Nesta fase, o JavaScript deixou de ser apenas para validação e passou a gerenciar a **arquitetura do site**.
 
 ### Funcionalidades Implementadas
 
-* **Validação de Formulário:** Adicionado um *script* para garantir que todos os campos obrigatórios no formulário de contato (`pages/contato.html`) sejam preenchidos antes da submissão. Inclui validação básica de formato de e-mail.
-* **Interações Dinâmicas:** Implementação de um efeito de **"menu *mobile* retrátil"** que aparece e desaparece com um clique, melhorando a navegação em dispositivos menores.
+1.  **Modularização de Componentes (Fetch API):**
+    * Para evitar repetição de código HTML (DRY - Don't Repeat Yourself), o Cabeçalho (`header.html`) e o Rodapé (`footer.html`) foram isolados na pasta `componentes/`.
+    * O arquivo `js/script.js` utiliza `fetch()` para injetar esses blocos em todas as páginas automaticamente.
 
-### Estrutura de Pastas (Atualizada)
+2.  **Gerenciamento Inteligente de Rotas:**
+    * O script detecta se o usuário está na raiz (`index.html`) ou em uma página interna (`pages/sobre.html`).
+    * Ele ajusta automaticamente os caminhos dos links (adicionando `../` quando necessário) para que o menu funcione perfeitamente em qualquer nível de pasta.
 
-- projeto-costury-arte/
-    - ├── css/
-    - │ └── style.css (Estilos, variáveis e Media Queries)
-    - ├── **js/**
-    - │ └── **script.js** (Lógica de validação e interatividade)
-    - ├── img/
-    - │ ├── Elegance.jpg (Galeria)
-    - │ ├── Barra.jpg (Galeria)
-    - │ ├── Madrinha.jpg (Galeria)
-    - │ └── [Outras imagens]
-    - ├── pages/
-    - │ ├── sobre.html (O Ateliê)
-    - │ └── contato.html (Contato/Orçamento com Mapa)
-    - └── index.html (Home Page)
+3.  **Validação de Formulário:**
+    * Script robusto que impede o envio de formulários vazios, valida o formato de e-mail e fornece feedback visual (bordas vermelhas e mensagens de erro) em tempo real.
 
 ---
 
-## 4. Estrutura de Pastas e Versão do Código
+## 4. Estrutura de Pastas (Atualizada - Parte 2)
 
-### Versão do Código
+A estrutura foi reorganizada para separar lógica, estilos e componentes, atendendo aos critérios de organização da rubrica:
 
-O código foi desenvolvido com foco total no **HTML Semântico** (`<header>`, `<main>`, `<section>`, `<footer>`, etc.), e a estilização no `style.css` é modular.
-A lógica do **JavaScript** (`script.js`) é concisa e focada em melhorar o processo de conversão do formulário.
+```text
+Projeto-Integrador/
+│
+├── componentes/        <-- [NOVO] Fragmentos HTML reutilizáveis
+│   ├── header.html
+│   └── footer.html
+│
+├── css/
+│   ├── style.css       <-- Estilos globais e variáveis
+│   └── responsive.css  <-- [NOVO] Regras específicas para Mobile/Tablet
+│
+├── js/
+│   └── script.js       <-- [NOVO] Carregamento de componentes e Validação
+│
+├── pages/              <-- Páginas internas
+│   ├── sobre.html
+│   └── contato.html
+│
+├── img/                <-- Imagens otimizadas
+│   ├── TecidoTitulo.png
+│   ├── Elegance.jpg
+│   └── ...
+│
+├── index.html          <-- Página Principal (Raiz)
+└── README.md           <-- Documentação
 
 ---
 
@@ -100,15 +103,27 @@ A lógica do **JavaScript** (`script.js`) é concisa e focada em melhorar o proc
 | 20/10/2025 | Matheus | Definição de Escopo, Público-Alvo e Identidade Visual (Figma). | Concluído |
 | 20/10/2025 | Melyssa | Estrutura HTML completa (`index.html`, `sobre.html`, `contato.html`) e aplicação de HTML Semântico. | Concluído |
 | 20/10/2025 | Melyssa | Criação e Refinamento do `style.css` (Identidade Visual, Responsividade e Layout). | Concluído |
-| **24/10/2025** | **Melyssa** | **Adição da pasta `js/` e do `script.js` (Validação de Formulário e Menu Mobile).** | **Concluído** |
+| 24/10/2025 | Melyssa | Adição da pasta `js/` e do `script.js` (Validação de Formulário e Menu Mobile). | Concluído |
 | 20/10/2025 | Melyssa | **Versionamento:** `git init`, Commit Inicial e Conexão com GitHub. | Concluído |
 | 20/10/2025 | Melyssa | **Publicação:** Push final para o repositório e ativação do GitHub Pages. | Concluído |
-| 20/10/2025 | Matheus | Geração da Documentação Final (`README.md`). | Concluído |
+| **17/11/2025** | **Melyssa** | **Modularização:** Criação da pasta `componentes` e separação de `header` e `footer`. | **Concluído** |
+| **17/11/2025** | **Melyssa** | **Back-end simulado:** Integração do formulário com Formspree e Google Maps. | **Concluído** |
+| **17/11/2025** | **Matheus** | **Refatoração CSS:** Ajustes finais de responsividade e correção de layout Desktop. | **Concluído** |
+| **17/11/2025** | **Matheus** | **Documentação:** Atualização do README.md com a Rubrica da Parte 2. | **Concluído** |
 
 ---
 
-## 6. Próximos Passos (Próxima Fase)
+## 6. Autoavaliação e Reflexão (Rubrica Parte 2)
 
-- **Refinamento do Conteúdo:** Inserir textos reais do ateliê para aprimorar o SEO.
-- **Expansão:** Desenvolver as páginas de portfólio e serviços planejadas, que não foram incluídas na navegação final desta fase.
-- **Interatividade Avançada:** Adicionar *slideshow* automático na galeria de fotos da *Home*.
+### O Que Funcionou Bem?
+* **Modularização Eficiente:** A estratégia de usar JavaScript (`fetch`) para carregar o cabeçalho e o rodapé funcionou perfeitamente. Eliminou a redundância de código e facilitou a manutenção futura.
+* **Identidade Visual:** A manutenção da paleta de cores (Preto e Dourado) e da tipografia serifada garantiu que o site continuasse a transmitir a sofisticação necessária para o público de Alta Costura.
+
+### Maior Desafio e Solução
+* **Desafio:** O gerenciamento de **caminhos relativos** nos componentes. Inicialmente, ao carregar o `header.html` dentro da página `pages/contato.html`, os links e imagens quebravam.
+* **Solução:** Implementamos uma lógica condicional no `script.js` que deteta a URL atual. Se o usuário estiver numa subpasta, o script adiciona automaticamente o prefixo `../` aos links.
+
+### Próximos Passos (Melhorias Futuras)
+1.  **Acessibilidade:** Implementar um *"Skip Link"* (botão oculto para "Pular para o conteúdo principal") para melhorar a navegação via teclado.
+2.  **SEO:** Inserir textos reais e finais do ateliê para melhorar o posicionamento no Google.
+3.  **Interatividade Avançada:** Adicionar um *slideshow* automático na galeria da Home.
