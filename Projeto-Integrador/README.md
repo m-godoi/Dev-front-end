@@ -51,15 +51,15 @@ Nesta fase, o JavaScript deixou de ser apenas para validação e passou a gerenc
 
 ### Funcionalidades Implementadas
 
-1.  **Modularização de Componentes (Fetch API):**
+1. **Modularização de Componentes (Fetch API):**
     * Para evitar repetição de código HTML (DRY - Don't Repeat Yourself), o Cabeçalho (`header.html`) e o Rodapé (`footer.html`) foram isolados na pasta `componentes/`.
     * O arquivo `js/script.js` utiliza `fetch()` para injetar esses blocos em todas as páginas automaticamente.
 
-2.  **Gerenciamento Inteligente de Rotas:**
+2. **Gerenciamento Inteligente de Rotas:**
     * O script detecta se o usuário está na raiz (`index.html`) ou em uma página interna (`pages/sobre.html`).
     * Ele ajusta automaticamente os caminhos dos links (adicionando `../` quando necessário) para que o menu funcione perfeitamente em qualquer nível de pasta.
 
-3.  **Validação de Formulário:**
+3. **Validação de Formulário:**
     * Script robusto que impede o envio de formulários vazios, valida o formato de e-mail e fornece feedback visual (bordas vermelhas e mensagens de erro) em tempo real.
 
 ---
@@ -93,10 +93,11 @@ Projeto-Integrador/
 │
 ├── index.html          <-- Página Principal (Raiz)
 └── README.md           <-- Documentação
+````
 
----
+-----
 
-## 5. Versionamento, Publicação e Progresso
+## 5\. Versionamento, Publicação e Progresso
 
 | Data | Responsável | Etapa Realizada | Status |
 | :--- | :--- | :--- | :--- |
@@ -111,19 +112,27 @@ Projeto-Integrador/
 | **17/11/2025** | **Matheus** | **Refatoração CSS:** Ajustes finais de responsividade e correção de layout Desktop. | **Concluído** |
 | **17/11/2025** | **Matheus** | **Documentação:** Atualização do README.md com a Rubrica da Parte 2. | **Concluído** |
 
----
+-----
 
-## 6. Autoavaliação e Reflexão (Rubrica Parte 2)
+## 6\. Autoavaliação e Reflexão (Rubrica Parte 2)
 
 ### O Que Funcionou Bem?
-* **Modularização Eficiente:** A estratégia de usar JavaScript (`fetch`) para carregar o cabeçalho e o rodapé funcionou perfeitamente. Eliminou a redundância de código e facilitou a manutenção futura.
-* **Identidade Visual:** A manutenção da paleta de cores (Preto e Dourado) e da tipografia serifada garantiu que o site continuasse a transmitir a sofisticação necessária para o público de Alta Costura.
+
+  * **Modularização Eficiente:** A estratégia de usar JavaScript (`fetch`) para carregar o cabeçalho e o rodapé funcionou perfeitamente. Eliminou a redundância de código e facilitou a manutenção futura.
+  * **Identidade Visual:** A manutenção da paleta de cores (Preto e Dourado) e da tipografia serifada garantiu que o site continuasse a transmitir a sofisticação necessária para o público de Alta Costura.
 
 ### Maior Desafio e Solução
-* **Desafio:** O gerenciamento de **caminhos relativos** nos componentes. Inicialmente, ao carregar o `header.html` dentro da página `pages/contato.html`, os links e imagens quebravam.
-* **Solução:** Implementamos uma lógica condicional no `script.js` que deteta a URL atual. Se o usuário estiver numa subpasta, o script adiciona automaticamente o prefixo `../` aos links.
+
+  * **Desafio:** O gerenciamento de **caminhos relativos** nos componentes. Inicialmente, ao carregar o `header.html` dentro da página `pages/contato.html`, os links e imagens quebravam.
+  * **Solução:** Implementamos uma lógica condicional no `script.js` que deteta a URL atual. Se o usuário estiver numa subpasta, o script adiciona automaticamente o prefixo `../` aos links.
 
 ### Próximos Passos (Melhorias Futuras)
+
 1.  **Acessibilidade:** Implementar um *"Skip Link"* (botão oculto para "Pular para o conteúdo principal") para melhorar a navegação via teclado.
 2.  **SEO:** Inserir textos reais e finais do ateliê para melhorar o posicionamento no Google.
 3.  **Interatividade Avançada:** Adicionar um *slideshow* automático na galeria da Home.
+
+<!-- end list -->
+
+```
+```
