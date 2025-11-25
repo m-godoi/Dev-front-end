@@ -1,0 +1,29 @@
+0000000000000000000000000000000000000000 c7911d86ffc8b5632ed475a8271e7332f6b87f0b Matheus Godoi <matheus.sgalves@gmail.com> 1760998919 -0300	clone: from https://github.com/m-godoi/Dev-front-end.git
+c7911d86ffc8b5632ed475a8271e7332f6b87f0b 22828865ebaddade48dcadeb50a54b345d74c7d0 m-godoi <matheus.sgalves@gmail.com> 1761004139 -0300	commit: add
+22828865ebaddade48dcadeb50a54b345d74c7d0 84fadc5864e15fff66bb5714c66d7ea8992c8f8a m-godoi <matheus.sgalves@gmail.com> 1761007562 -0300	commit: readme
+84fadc5864e15fff66bb5714c66d7ea8992c8f8a c05b0b29a043c4f63af7b0a35201e06a65a7fd04 m-godoi <matheus.sgalves@gmail.com> 1763416859 -0300	pull --tags origin main: Fast-forward
+c05b0b29a043c4f63af7b0a35201e06a65a7fd04 662743069446e54880c30019bf8c0ee76a335f72 m-godoi <matheus.sgalves@gmail.com> 1763416968 -0300	commit: att
+662743069446e54880c30019bf8c0ee76a335f72 4e44ba6be5f3c3778f64a46afbceb4195f31307d m-godoi <matheus.sgalves@gmail.com> 1763417050 -0300	commit: att
+4e44ba6be5f3c3778f64a46afbceb4195f31307d af5c0deef88f906966baf2288983bb9c34b0bd1e m-godoi <matheus.sgalves@gmail.com> 1763425985 -0300	commit: pt2
+af5c0deef88f906966baf2288983bb9c34b0bd1e 0f5eaad73ee7e4f4833bad7f341383a5bb8e4930 m-godoi <matheus.sgalves@gmail.com> 1763430404 -0300	commit: add
+0f5eaad73ee7e4f4833bad7f341383a5bb8e4930 ff285b1ea2b1c6f68b3774f9860b664177b8cb3c m-godoi <matheus.sgalves@gmail.com> 1763433305 -0300	commit: add
+ff285b1ea2b1c6f68b3774f9860b664177b8cb3c da074e3490ed8cfc392a5d74cefd619c90e6757b m-godoi <matheus.sgalves@gmail.com> 1763433598 -0300	commit: add
+da074e3490ed8cfc392a5d74cefd619c90e6757b 3ef251bebec725e7d6d29a5da6bf17b9c77c6efa m-godoi <matheus.sgalves@gmail.com> 1763433736 -0300	commit: add
+3ef251bebec725e7d6d29a5da6bf17b9c77c6efa 37249e7b1225948f2ed50c5a0581755469d9a080 m-godoi <matheus.sgalves@gmail.com> 1763433847 -0300	commit: add
+37249e7b1225948f2ed50c5a0581755469d9a080 9ba10ad541ae889799229e450289f4e014ea238b m-godoi <matheus.sgalves@gmail.com> 1764031198 -0300	commit: att
+9ba10ad541ae889799229e450289f4e014ea238b cb4e0444a7f20348efbaab00bd7b8f919a303cf3 m-godoi <matheus.sgalves@gmail.com> 1764034616 -0300	pull --tags origin main: Fast-forward
+cb4e0444a7f20348efbaab00bd7b8f919a303cf3 8aa4d5a2cae9ba86cb67c6c168d22120c389695c m-godoi <matheus.sgalves@gmail.com> 1764034645 -0300	commit: att
+8aa4d5a2cae9ba86cb67c6c168d22120c389695c e877c6044eb18fc9a22f07ba7b75cc683d596c25 m-godoi <matheus.sgalves@gmail.com> 1764034818 -0300	commit: add
+e877c6044eb18fc9a22f07ba7b75cc683d596c25 b6a912cd3441db90aa584fd05fdf9e9fe4215bb2 m-godoi <matheus.sgalves@gmail.com> 1764035051 -0300	commit: add
+b6a912cd3441db90aa584fd05fdf9e9fe4215bb2 aae3abe6bdea566d8e075849805d36bf44beb89d m-godoi <matheus.sgalves@gmail.com> 1764035390 -0300	commit: add
+aae3abe6bdea566d8e075849805d36bf44beb89d 37f666aafb876bcfed5394454035f60c0d67a3a3 m-godoi <matheus.sgalves@gmail.com> 1764035973 -0300	commit: add
+37f666aafb876bcfed5394454035f60c0d67a3a3 877ee6506cb62788cddb7948a8320c3ff40ad5d6 m-godoi <matheus.sgalves@gmail.com> 1764036284 -0300	commit: add
+877ee6506cb62788cddb7948a8320c3ff40ad5d6 55f8213c9a2b6b22c18dd1936596325052d05c95 m-godoi <matheus.sgalves@gmail.com> 1764036395 -0300	commit: fix: update footer and header links to remove 'pages/' prefix
+55f8213c9a2b6b22c18dd1936596325052d05c95 030ae0c84ea13b5a9759c3fedd9be48804c2b104 m-godoi <matheus.sgalves@gmail.com> 1764037701 -0300	commit: refactor: remove old CSS files and add minified versions
+030ae0c84ea13b5a9759c3fedd9be48804c2b104 f416958d70bb0a45f3f2483945051a415967be7f m-godoi <matheus.sgalves@gmail.com> 1764037716 -0300	commit: add: incluir imagem do site publicado
+f416958d70bb0a45f3f2483945051a415967be7f 44b27b6ea60400c4a166287dddcf745361bf0ce0 m-godoi <matheus.sgalves@gmail.com> 1764037728 -0300	commit: add: incluir imagem ao projeto
+44b27b6ea60400c4a166287dddcf745361bf0ce0 4ebb5427de0229cdfada7eacc3318684c81fb1a5 m-godoi <matheus.sgalves@gmail.com> 1764037752 -0300	commit: refactor: atualizar links de CSS para versões minificadas
+4ebb5427de0229cdfada7eacc3318684c81fb1a5 a27b6dcd9dbe3f941b97a24200e97b7cda6e8d22 m-godoi <matheus.sgalves@gmail.com> 1764037782 -0300	commit: refactor: ajustar formatação do código HTML no footer e header
+a27b6dcd9dbe3f941b97a24200e97b7cda6e8d22 e8676957123dc69f53fbc7338835e7ac2f4922e3 m-godoi <matheus.sgalves@gmail.com> 1764037791 -0300	commit: refactor: melhorar validação de formulário e exibição de mensagens de erro
+e8676957123dc69f53fbc7338835e7ac2f4922e3 066875a69a7b5103013d9dd9ad520cfaa2ffbe02 m-godoi <matheus.sgalves@gmail.com> 1764038045 -0300	commit: refactor: substituir script.js por main.min.js com melhorias na carga de componentes e validação de formulário
+066875a69a7b5103013d9dd9ad520cfaa2ffbe02 9cbf277ac1c0f150186935bd83be30baa696f799 m-godoi <matheus.sgalves@gmail.com> 1764038062 -0300	commit: refactor: substituir script.js por main.min.js em contato.html, index.html e sobre.html

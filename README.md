@@ -129,6 +129,19 @@ Projeto-Integrador/
 2.  **SEO:** Inserir textos reais e finais do ateliê para melhorar o posicionamento no Google.
 3.  **Interatividade Avançada:** Adicionar um *slideshow* automático na galeria da Home.
 
+## 7\. Acesso ao Site
+
+- Link do Site: https://m-godoi.github.io/Dev-front-end
+<div align="center">
+  <img src="img/SitePublicado.png" alt="Captura de tela do site publicado" width="800" style="border-radius: 10px; border: 1px solid #2A233D;">
+</div>
+- 24/11/2025
+
+
+
+
+
+
 <!-- end list -->
 
 ```
